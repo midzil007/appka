@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+<ion-card> 
+
+  <ion-card-content>
+  <h1>To je namo apka</h1>
+    Vítame vás v naší applikaci, bla bla bla
+  </ion-card-content>
+
+</ion-card>
+<ion-list> 
+  <ion-item>
+    <ion-label floating>Zadejte Email</ion-label>
+    <ion-input type="text" [(ngModel)]="email"></ion-input>
+  </ion-item>
+ 
+</ion-list>
+ <button ion-button full (click)="singIn()">OK</button>
+ </ion-content>

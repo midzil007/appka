@@ -1,0 +1,30 @@
+<ion-header>
+  <custom-header></custom-header>
+</ion-header>
+  
+<ion-content>
+<div padding *ngIf="total > 0">
+      Máte {{countItems}} položek za {{total}} Kč
+    </div>     
+ 
+<ion-list>
+        <div *ngFor="let item of machinelist" >
+          <div>
+             
+            <p class="machine-item"><strong>{{item.value.title}}</strong></p> 
+
+               <div *ngFor="let props of item.value.machineprop" >
+                  <button ion-button item-start (click)="initBasket(item.value.id, props,'+')">+ </button> 
+                  <button class="button-view" ion-button item-start (click)="initBasket(item.value.id, props,'-')">-</button>
+                 {{cartlist[item.value.id+'_'+props.id]}}  KS - {{props.title}} 
+                
+               </div>  
+          </div> 
+       
+        </div> 
+
+      </ion-list> 
+        <div padding-bottom> <button padding-bottom ion-button (click)="sendOrder()">SendOrder</button> 
+            </div>
+</ion-content>
+<custom-footer></custom-footer>

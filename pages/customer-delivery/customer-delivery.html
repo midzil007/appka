@@ -1,0 +1,41 @@
+<!--
+  Generated template for the CustomerDeliveryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CustomerDelivery</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list radio-group [(ngModel)]="delivery">
+  <ion-list-header>
+    Doprava
+  </ion-list-header>
+
+  <ion-item  *ngFor="let item of deliverylist" >>
+    <ion-label>{{item.name}} - {{item.descr}}</ion-label> 
+    <ion-radio  value="{{item.id}}"></ion-radio>  
+  </ion-item> 
+
+</ion-list>
+
+<ion-list radio-group [(ngModel)]="payment">
+  <ion-list-header>  
+    Platba
+  </ion-list-header>
+
+  <ion-item  *ngFor="let item of paymentlist" >>
+    <ion-label>{{item.nazev}} - {{item.popis}} - {{item.cena}} Kč</ion-label> 
+    <ion-radio  value="{{item.id}}"></ion-radio>  
+  </ion-item> 
+
+</ion-list>
+ <button padding ion-button full (click)="saveOptions()">ULOŽIT</button>
+</ion-content>

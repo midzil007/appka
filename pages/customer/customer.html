@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+Profil
+    </ion-title>
+
+  
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    Vaše nastavení
+  </ion-card-header>
+           
+    <button ion-button full color="secondary" icon-start (click)="itemSelected('data')">
+      <ion-icon name="contacts" item-start></ion-icon>
+      Mé údaje
+    </button>
+
+    <button ion-button full color="secondary"  icon-start  (click)="itemSelected('delivery')">
+      <ion-icon name="cash" item-start></ion-icon>
+      Doprava a platba
+    </button>
+
+    <button ion-button full color="secondary" icon-start (click)="itemSelected('properties')">
+      <ion-icon name="list-box" item-start></ion-icon>
+		Mé příslušenství       
+    </button>  
+    </ion-card>
+</ion-content>

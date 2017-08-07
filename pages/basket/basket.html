@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Doplňovač zásob :D</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>  
+<div padding *ngIf="total > 0">
+      Máte {{countItems}} položek za {{total}} Kč
+    </div> 
+
+<ion-grid>
+  <ion-row *ngFor="let row of listProducts">
+    <ion-col width-50 *ngFor="let item of row">
+      <ion-card>
+        <ion-card-header>
+        {{item.title}}
+        </ion-card-header>
+        <ion-card-content>   
+          <img src="{{item.image}}">
+          <p float-left text-right margin-top>{{item.price}} Kč</p> 
+           <div float-right>
+             <button class="button-view" ion-button item-start (click)="initBasket(item,'-')">-</button>
+             <button ion-button item-start (click)="initBasket(item,'+')">+ </button>   
+             {{showCountItem(item.id)}}  0
+           </div>   
+        </ion-card-content>
+      </ion-card> 
+    </ion-col> 
+  </ion-row>
+</ion-grid>
+</ion-content>
+ 

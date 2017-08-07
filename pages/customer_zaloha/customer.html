@@ -1,0 +1,62 @@
+<ion-header>
+  <custom-header></custom-header>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+
+  <ion-item> 
+    <ion-label floating>Jméno a příjmení* </ion-label>    
+    <ion-input type="text" [(ngModel)]="lastData.fu_jmeno"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label floating>Email*</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Telefonní číslo*</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.fu_phone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Ulice a číslo popisné*</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.fu_ulice"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Město*</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.fu_mesto"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Firma</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.fu_firma"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>IČO</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.fu_ico"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>DIČ</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.fu_dic"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label floating>Jméno a příjmeni</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.firstname+' '+lastData.surname"></ion-input>
+  </ion-item> <ion-item>
+    <ion-label floating>Firma</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.firma"></ion-input>
+  </ion-item> <ion-item>
+    <ion-label floating>Telefonní číslo</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.phone"></ion-input>
+  </ion-item> <ion-item>
+    <ion-label floating>Ulice a číslo popisné</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.ulice"></ion-input>
+  </ion-item> <ion-item>
+    <ion-label floating>Město</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.mesto"></ion-input>
+  </ion-item> <ion-item>
+    <ion-label floating>PSČ</ion-label>
+    <ion-input type="text" [(ngModel)]="lastData.psc"></ion-input>
+  </ion-item>
+</ion-list>
+ <button padding ion-button full (click)="saveCustomer()">ULOŽIT</button> 
+</ion-content>

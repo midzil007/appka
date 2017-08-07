@@ -1,0 +1,13 @@
+<ion-header>
+  <custom-header></custom-header>
+</ion-header> 
+
+
+<ion-content padding>
+<h1>{{title}}</h1>
+<ion-card padding> 
+<div [innerHTML] = "html"></div>
+</ion-card>  
+<img [src]="imagepath"> 
+</ion-content>
+<custom-footer></custom-footer>
